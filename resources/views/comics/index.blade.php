@@ -1,15 +1,19 @@
 @extends('layouts.app')
 
 @section('main_content')
-<h1>Comics:</h1>
+<div class="container">
 
-<ul>
-    @foreach ($comics as $comic)
-        <li>
-            <h3>{{ $comic->title}}</h3>
-            <h5>{{$comic->type}}</h5>
-        </li>
-    @endforeach
-</ul>
+    <h1>Comics:</h1>
+    
+    <ul>
+        @foreach ($comics as $comic)
+            <li>
+                <h3>{{ $comic->title}}</h3>
+                <h5>{{$comic->type}}</h5>
+                <a href="{{route('comics.show', ['comic'=>$comic->id])}}">Go To Details</a>
+            </li>
+        @endforeach
+    </ul>
+</div>
     
 @endsection

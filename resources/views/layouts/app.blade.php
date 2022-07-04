@@ -10,7 +10,7 @@
 <body>
 
     <header>
-        header
+        <a href="{{ route('comics.index') }}">Go To all Comics</a>
     </header>
 
     <main>
